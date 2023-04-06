@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Guia1 {
@@ -39,7 +40,7 @@ public class Guia1 {
 		
 		// Ejercicio 5
 		
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in).useLocale(Locale.US);
 		System.out.print("Ingrese un número: ");
 		int num = input.nextInt();
 		if (num > 0 && num % 2 == 0) {
@@ -50,17 +51,18 @@ public class Guia1 {
 		// Ejercicio 6
 		
 		System.out.print("Ingrese su nombre: ");
-		String nombre = input.next();
+		input.nextLine();
+		String nombre = input.nextLine();
 		System.out.println("Hola, " + nombre);
 
 		
 		// Ejercicio 7
 		
-		System.out.print("Ingrese un número decimal: ");
+		System.out.println("Ingrese un número decimal: ");
 		double decimal = input.nextDouble();
-		int entero = (int) decimal;
+		int entero = (int)decimal;
 		System.out.println("El número decimal " + decimal + " convertido a entero es: " + entero);
-
+		
 		
 		// Ejercicio 8
 		
@@ -81,11 +83,13 @@ public class Guia1 {
 		// Ejercicio 10
 		
 		System.out.print("Ingrese su nombre: ");
-		String nombre2 = input.next();
+		input.nextLine();
+		String nombre2 = input.nextLine();
 		System.out.print("Ingrese su edad: ");
 		int edad2 = input.nextInt();
 		System.out.print("Ingrese su correo electrónico: ");
-		String correo = input.next();
+		input.nextLine();
+		String correo = input.nextLine();
 		System.out.println("Nombre: " + nombre2);
 		System.out.println("Edad: " + edad2);
 		System.out.println("Correo electrónico: " + correo);
