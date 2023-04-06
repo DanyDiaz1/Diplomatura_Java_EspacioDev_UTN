@@ -1,0 +1,5 @@
+#ignorar metadata
+.metadata
+
+#ignorar settings
+.settings
