@@ -3,20 +3,20 @@ public class Funciones {
 
 	public static void main(String[] args) {
 		
-		/*int resultado = sumar(7,4);
+		int resultado = sumar(7,4);
 		
-		sumarSinRetorno(9, 5);*/
+		sumarSinRetorno(9, 5);
 		
 		String nombre = "Matias";
 		int edadUsuario = 15;
 		
-		/*boolean esMayor = validarEdad(edadUsuario);
+		boolean esMayor = validarEdad(edadUsuario);
 		
 		if(esMayor == true) {
 			System.out.println("Bienvenido " + nombre);
 		}else {
 			System.out.println("No sos mayor de edad");
-		}*/
+		}
 		
 		validarEdadSinRetorno(nombre, edadUsuario);
 		
