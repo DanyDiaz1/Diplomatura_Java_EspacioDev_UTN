@@ -3,3 +3,8 @@
 
 #ignorar settings
 .settings
+
+.classpath
+
+.project
+

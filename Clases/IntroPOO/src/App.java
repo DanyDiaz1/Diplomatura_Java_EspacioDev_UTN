@@ -5,7 +5,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Ingrese el primer numero");
+		/*System.out.println("Ingrese el primer numero");
 		int numero1 = teclado.nextInt();
 		System.out.println("Ingrese el segundo numero");
 		int numero2 = teclado.nextInt();
@@ -14,12 +14,12 @@ public class App {
 		
 		int resultado=calcu.multiplicar(numero1, numero2);
 		
-		System.out.println("El resultado es: " + resultado);
+		System.out.println("El resultado es: " + resultado);*/
 		
 		Persona p1 = new Persona("Dany",22,451341,"M");
 		
 		
-		p1.saludar();
+		p1.detallarInfo();
 		
 		Persona p2 = new Persona();
 		p2.nombre="Mariano";
@@ -27,8 +27,10 @@ public class App {
 		p2.DNI=12341;
 		p2.genero="M";
 		
-		p2.saludar();
+		p2.detallarInfo();
 		
+		Persona p3 = new Persona("Mai", 20);
+		p3.detallarInfo();
 		
 	}
 
