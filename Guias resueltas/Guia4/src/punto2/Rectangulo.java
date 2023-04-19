@@ -1,8 +1,9 @@
+package punto2;
 
 public class Rectangulo {
 	//Atributos
-	int ancho;
-	int largo;
+	public int ancho;
+	public int largo;
 	
 	//Constructor
 	public Rectangulo() {

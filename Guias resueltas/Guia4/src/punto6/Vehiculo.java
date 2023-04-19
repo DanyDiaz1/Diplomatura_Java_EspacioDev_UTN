@@ -1,3 +1,5 @@
+package punto6;
+import java.util.Calendar;
 
 public class Vehiculo {
 	//Atributos
@@ -24,12 +26,16 @@ public class Vehiculo {
 	
 	public void determinarAntiguedad() {
 		
-		if(2023-this.anio > 10) {
+		Calendar fechaActual = Calendar.getInstance();
+		int year = fechaActual.get(Calendar.YEAR);
+		
+		if(year-this.anio > 10) {
 			System.out.println("Es antiguo");
 		}else {
 			System.out.println("Es nuevo");
 		}
 		
 	}
+	
 	
 }

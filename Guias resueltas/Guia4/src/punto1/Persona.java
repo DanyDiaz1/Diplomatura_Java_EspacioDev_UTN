@@ -1,10 +1,11 @@
+package punto1;
 
 public class Persona {
 	
 	//Atributos
-	String nombre;
-	String edad;
-	String genero;
+	public String nombre;
+	public String edad;
+	public String genero;
 	
 	//Constructor
 	
