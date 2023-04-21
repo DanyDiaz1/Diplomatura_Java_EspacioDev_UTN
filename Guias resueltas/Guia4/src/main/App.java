@@ -98,9 +98,8 @@ public class App {
         factura1.monto=1500;
         factura1.cliente.descuento=0.2;
         System.out.println("Monto total de la factura: " + factura1.monto);
-        System.out.println("Monto total con descuento: " + (factura1.monto - (factura1.monto * factura1.cliente.descuento)));
-        factura1.mostrarDetalles();
-		
+        System.out.println("Monto total con descuento: " + factura1.calcularMontoDescuento());
+        factura1.mostrarDetalles();	
 	}
 
 }

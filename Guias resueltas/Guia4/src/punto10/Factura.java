@@ -18,6 +18,12 @@ public class Factura {
     }
     
     public void mostrarDetalles() {
+    	
     	System.out.println("Factura[id= " + this.id + ", fecha= " + this.fecha + ", monto= "+ this.monto+ ", cliente= "+ this.cliente.nombre + "]");
+    }
+    
+    public double calcularMontoDescuento() {
+    	
+    	return this.monto-(this.monto*this.cliente.descuento);
     }
 }
