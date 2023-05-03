@@ -18,9 +18,9 @@ public class App {
 		//Ejercicio 1
 		Persona persona1 = new Persona();
 		
-		persona1.nombre="Leo";
-		persona1.edad="22";
-		persona1.genero="M";
+		persona1.setNombre("Leo");
+		persona1.setEdad("22");
+		persona1.setGenero("M");
 		
 		persona1.imprimirDetalles();
 		

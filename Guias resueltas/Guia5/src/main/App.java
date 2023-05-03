@@ -112,7 +112,7 @@ public class App {
 		 */
 
 		// Declarar y inicializar el array
-		String[] palabras = { "Hola", "Mundo", "Programación", "Java", "Lenguaje", "Computadora" };
+		String palabras[] = { "Hola", "Mundo", "Programación", "Java", "Lenguaje", "Computadora" };
 
 		// Encontrar la palabra más larga en el array
 		String palabraMasLarga = "";
@@ -275,9 +275,9 @@ public class App {
 		String paisBuscado = "Colombia";
 
 		for (Libro libro : biblioteca) {
-			Autor autor = libro.autor;
-			if (autor.pais.equals(paisBuscado)) {
-				System.out.println(libro.titulo + " - " + autor.nombre);
+			Autor autorAux = libro.autor;
+			if (autorAux.pais.equals(paisBuscado)) {
+				System.out.println(libro.titulo + " - " + autorAux.nombre);
 			}
 		}
 
@@ -288,6 +288,7 @@ public class App {
 		 * todas las palabras que tienen menos de cuatro letras del array y luego
 		 * imprime el nuevo array resultante.
 		 */
+		
 		String[] palabras1 = {"Hola", "mundo", "de", "programación", "en", "Java"};
         int nuevoTamano = 0;
         
