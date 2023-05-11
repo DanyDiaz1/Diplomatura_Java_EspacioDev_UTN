@@ -7,16 +7,18 @@ public class Raton extends DispositivoEntrada{
 	
 	
 	//Constructor
-	public Raton(String tipoEntrada, String marca) {
-		super(tipoEntrada, marca);
+	public Raton(String tipoEntrada, String marca, double precio) {
+		super(tipoEntrada, marca, precio);
 		this.idRaton = ++Raton.contadorRatones;
 	}
-
+	
 
 	@Override
 	public String toString() {
-		return "Raton [" + super.toString()+ "]";
+		return "Raton [ Marca= " + super.getMarca()+ ", Precio= "+ super.getPrecio()+ "]";
 	}
+
+
 	
 	
 }

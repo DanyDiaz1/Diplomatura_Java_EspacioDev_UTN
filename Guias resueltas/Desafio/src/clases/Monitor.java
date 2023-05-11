@@ -1,28 +1,15 @@
 package clases;
 
-public class Monitor{
-	//Atributos
+public class Monitor extends DispositivoSalida {
+	// Atributos
 	private final int idMonitor;
-	private String marca;
 	private double tamanio;
 	private static int contadorMonitores;
-	
-	public Monitor() {
-		this.idMonitor= ++Monitor.contadorMonitores;
-	}
 
-	public Monitor(String marca, double tamanio) {
-		this.idMonitor= ++Monitor.contadorMonitores;
-		this.marca = marca;
+	public Monitor(String tipoSalida, String marca, double tamanio, double precio) {
+		super(tipoSalida, marca, precio);
+		this.idMonitor = ++Monitor.contadorMonitores;
 		this.tamanio = tamanio;
-	}
-
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
 	}
 
 	public double getTamanio() {
@@ -35,10 +22,7 @@ public class Monitor{
 
 	@Override
 	public String toString() {
-		return "Monitor [marca=" + marca + ", tamanio=" + tamanio + "]";
+		return "Monitor [ Marca= " + super.getMarca() + ", tamanio= " + tamanio + ", Precio= "+ super.getPrecio()+"]";
 	}
-	
-	
-	
-	
+
 }

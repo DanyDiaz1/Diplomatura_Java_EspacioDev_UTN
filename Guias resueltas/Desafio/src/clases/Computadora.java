@@ -1,32 +1,30 @@
 package clases;
 
 public class Computadora {
-	
-	//Atributos
+
+	// Atributos
 	private final int idComputadora;
 	private static int contadorComputadoras;
+	private int contadorMonitores;
 	private String nombre;
-	private Monitor monitor;
+	private Monitor monitores[];
 	private Teclado teclado;
 	private Raton raton;
-	
-	//Constructor
+	private Parlante parlante;
+
+	// Constructor
 	public Computadora() {
-		this.idComputadora= ++ Computadora.contadorComputadoras;
+		this.idComputadora = ++Computadora.contadorComputadoras;
+		this.monitores = new Monitor[3];
 	}
 
-	public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
-		this.idComputadora= ++ Computadora.contadorComputadoras;
+	public Computadora(String nombre, Teclado teclado, Raton raton, Parlante parlante) {
+		this.idComputadora = ++Computadora.contadorComputadoras;
 		this.nombre = nombre;
-		this.monitor = monitor;
+		this.monitores = new Monitor[3];
 		this.teclado = teclado;
 		this.raton = raton;
-	}
-
-	@Override
-	public String toString() {
-		return "Computadora [nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton
-				+ "]";
+		this.parlante = parlante;
 	}
 
 	public String getNombre() {
@@ -35,14 +33,6 @@ public class Computadora {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public Monitor getMonitor() {
-		return monitor;
-	}
-
-	public void setMonitor(Monitor monitor) {
-		this.monitor = monitor;
 	}
 
 	public Teclado getTeclado() {
@@ -60,5 +50,45 @@ public class Computadora {
 	public void setRaton(Raton raton) {
 		this.raton = raton;
 	}
-	
+
+	public Parlante getParlante() {
+		return parlante;
+	}
+
+	public void setParlante(Parlante parlante) {
+		this.parlante = parlante;
+	}
+
+	public Monitor[] getMonitores() {
+		return monitores;
+	}
+
+	public void setMonitores(Monitor[] monitores) {
+		this.monitores = monitores;
+	}
+
+	public void agregarMonitor(Monitor monitor) {
+		if (contadorMonitores < 3) {
+			this.monitores[contadorMonitores++] = monitor;
+		} else {
+			System.out.println("Excediste la cantidad maxima por Computadora");
+		}
+	}
+
+	public void mostrarComputadora() {
+		System.out.println("Nombre: " + this.nombre);
+
+		for (Monitor monitor : this.monitores) {
+			if (monitor != null) {
+				System.out.println(monitor);
+			}
+		}
+
+		System.out.println(teclado);
+		System.out.println(raton);
+		System.out.println(parlante);
+		System.out.println("-----");
+
+	}
+
 }
