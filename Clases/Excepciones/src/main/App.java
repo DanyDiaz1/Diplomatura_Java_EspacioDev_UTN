@@ -11,22 +11,6 @@ public class App {
 	public static void main(String[] args) throws MenorDeEdadException  {
 
 		Scanner teclado = new Scanner(System.in);
-
-		
-		System.out.println("Ingrese una edad");
-		int edad = teclado.nextInt();
-		if(edad<18) {
-			System.out.println("Sos menor de edad");
-		}
-		
-		
-		
-			try {
-				Calculadora.dividir(5, 0);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				System.out.println(e.getMessage());
-			}
 		
 
 		try {
@@ -40,7 +24,7 @@ public class App {
 			System.out.println(resultado);
 
 		} catch (InputMismatchException ex) {
-			System.out.println("Pusiste una letra en vez de un numero");
+			ex.printStackTrace();
 		} catch (ArithmeticException ex) {
 			System.out.println(ex.getMessage());
 		} catch (Exception ex) {
